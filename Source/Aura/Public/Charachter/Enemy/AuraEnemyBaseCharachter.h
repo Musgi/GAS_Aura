@@ -19,4 +19,6 @@ public:
 	AAuraEnemyBaseCharachter();
 	void HighlightActor() override;
 	void UnHighlightActor() override;
+protected:
+	virtual void BeginPlay() override;
 };
