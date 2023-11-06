@@ -29,12 +29,12 @@ protected:
 
 private:
 	UPROPERTY(EditAnywhere, Category= "Input")
-	TObjectPtr<UInputMappingContext> AuraDefaultInputMappingContext;
+	UInputMappingContext* AuraDefaultInputMappingContext;
 	UPROPERTY(EditAnywhere, Category= "Input")
 	TObjectPtr<UInputAction> MoveInputAction;
 	
-	TObjectPtr<IInteractionInterface> CurrentActorUnderCursor;
-	TObjectPtr<IInteractionInterface> PreviousActorUnderCursor;
+	IInteractionInterface* CurrentActorUnderCursor;
+	IInteractionInterface* PreviousActorUnderCursor;
 	
 	void Move(const FInputActionValue& InputActionValue);
 	void CheckActorUnderMouseCursor();
